@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- The meta tag below is required for responsive styling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The bootstrap CSS has been downloaded to the static folder. It is referenced using a Jinja command with the Flask url_for function -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- The following defines a Jinja block named 'title' -->
+    <title>{% block title %}{% endblock %} - App2</title>
+</head>
+<body>
+<!-- The div defines a responsive container and uses a Bootstrap css class -->
+<div class="container">
+    {# This is Jinja comment syntax, rather than an HTML comment. #}
+    {% block content %}
+        {# This block defines an area of the template called 'content' where child templates can add their own content #}
+    {% endblock %}
+</div>
+<!-- The following is the bootstrap JavaScript which is needed for some of the Bootstrap features -->
+<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+</body>
+</html>
