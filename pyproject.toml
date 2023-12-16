@@ -1,0 +1,28 @@
+[project]
+name = "comp0034-1"
+version = "1.0.0"
+description = "COMP0034 Week 1 coding activities"
+dependencies = [
+    "flask",
+]
+
+[build-system]
+requires = [
+    "setuptools>=65.0",
+    "setuptools-scm[toml]>=6.2.3",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "2.7"
+addopts = "-rfEX -p pytester --strict-markers"
+python_files = ["test_*.py", "*_test.py", "test/*.py"]
+python_classes = ["Test"]
+python_functions = ["test"]
+testpaths = ["test"]
+xfail_strict = true
+filterwarnings = [
+    "error",
+    # pytest's own futurewarnings
+    "ignore::pytest.PytestExperimentalApiWarning",
+]
