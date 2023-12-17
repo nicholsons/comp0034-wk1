@@ -1,4 +1,6 @@
-# COMP0034 2023-24 Week 1 coding activities - intro to basic Flask applications
+# Intro to basic Flask applications
+
+_COMP0034 2023-24 Week 1 coding activities_
 
 You are strongly advised to start these before the tutorial so that you have time to learn the basics and consider any
 questions you may have.
@@ -7,6 +9,7 @@ questions you may have.
 
 1. Go to <https://github.com/nicholsons/comp0034-1>
 2. Fork the repository. This creates a copy in your GitHub account.
+
    ![Fork a repository](assets/fork.png)
 3. Clone the repository from your GitHub account to your IDE.
     - [VS Code](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_clone-a-repository-locally)
@@ -25,7 +28,7 @@ questions you may have.
 2. Run the Flask app using the run function in the IDE (usually a green triangle in PyCharm and VS Code). You should see
    output in the terminal similar to the following:
 
-   ¡[Run Flask](assets/run1.png)
+   ![Run Flask](assets/run1.png)
 
 3. Click on the URL which is likely to be the default <http://127.0.0.1:5000>. You should see your app in a browser.
 
@@ -85,13 +88,75 @@ Now go back to Terminal and start the app from the command line using `flask --a
 add `--port 5001` to the end of the command chain if you need to change the port number).
 
 ## 5. View and run a Flask app that uses a template and .CSS styling
-We will not learn this until the second half of the course. However, so you can see the difference, open the flask_app2 folder.
 
--  `static` contains CSS and JavaScript files. The ones in the folder are downloaded from Bootstrap.
-- `templates` contains two files:
+You will not learn HTML and Jinja templates until after reading week. However, so you can see the difference, open the
+flask_app2 folder.
 
-    - 
+- `static` contains CSS and JavaScript files. The files in the folders are downloaded
+  from [Bootstrap](https://getbootstrap.com).
+- `templates` contains two files. These have a parent/child relationship where the child inherits all the parent's
+  content:
 
-Run the app from the Terminal command line in your IDE. You should see the styling looks different.
+    - `layout.html`, the parent. A mix of HTML that defines the page layout, and Jinja that defines blocks, areas that
+      child pages can implement.
+    - `index.html`, the child. A mix of HTML and Jinja. The layout is inherited from `layout.html` and then the Jinja
+      blocks for the page title and content are specified for this page.
+
+Run the app from the Terminal command line in your IDE. You should see the styling (e.g. font, page margins) looks
+different.
 
 `flask --app flask_app2/app2.py run --debug`
+
+Don't forget to stop the running app using `CTRL+C` in the command line interface.
+
+## 6. Create a basic Flask app for the paralympics app
+
+In the paralympics folder, create an appropriately named python file and add code to create a basic app with a home page
+message.
+
+You can give the python file any name except for flask.py (calling it `flask.py` would conflict with Flask itself.).
+
+> Challenge: try and add a variable route that allows the user to enter their name and a personalised homepage message
+> e.g. 'Hello _name_ and welcome to my paralympics app'.
+>
+> See Flask documentation:
+> - [HTML escaping](https://flask.palletsprojects.com/en/2.3.x/quickstart/#html-escaping)
+> - [Variable routes](https://flask.palletsprojects.com/en/2.3.x/quickstart/#variable-rules)
+
+Make sure you can run and stop the paralympics app.
+
+A solution will be given in next week's coding activities.
+
+## 7. Start the coursework
+
+1. Read the specification.
+2. Sign in to GitHub.
+3. Use the correct link (individual/group) to create the coursework repository from the GitHub classroom:
+
+    - [COMP0034 Coursework 2 (Individual)](https://classroom.github.com/a/H-Z2Ab1c)
+        - Accept the assignment.
+        - Accept to join the ucl-comp0035 organisation if prompted
+    - [COMP0034 Coursework 1 (Group)](https://classroom.github.com/a/z2jRn9PD)
+        - **One person only (first person from the group)**
+        - Accept the assignment.
+        - If prompted, accept to join the comp0035-ucl organisation.
+        - Create the group (team) using the same name as your Moodle group name (e.g. Group_01, Group_02 etc.).
+        - **All other group members**
+        - Accept the assignment.
+        - If prompted, accept to join the comp0035-ucl organisation.
+        - Select your group (team) name from the list.
+4. Find the repository you just created in the [ucl-comp0035 organisation](https://github.com/ucl-comp0035)
+5. Clone your repository to your IDE (e.g. VS Code, PyCharm).
+6. Create and activate a virtual environment.
+7. Install Flask in the virtual environment e.g. `pip install Flask`
+8. Create a README.md
+9. Create a requirements.txt
+10. Create an 'src' directory in the project files (or create a directory with your app's name if you prefer)
+11. Create a pyproject.toml
+12. Create a 'data' directory and add your data file(s) (.csv, .xlsx)
+13. Create an appropriately named python file in the directory created at step 10. Add code to create a basic Flask app.
+14. Commit and push the changes to GitHub.
+15. Make sure your Flask app can run and be stopped.
+
+Steps 2 - 11 were covered several times in COMP0035 so are no longer repeated in detail in this course. Refer to
+tutorials 1 and 2 in COMP0035.
