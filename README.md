@@ -28,7 +28,7 @@ questions you may have.
 2. Run the Flask app using the run function in the IDE (usually a green triangle in PyCharm and VS Code). You should see
    output in the terminal similar to the following:
 
-   ![Run Flask](assets/run1.png)
+   <img src="assets/run1.png" alt="Run Flask" width="60%">
 
 3. Click on the URL which is likely to be the default <http://127.0.0.1:5000>. You should see your app in a browser.
 
@@ -129,14 +129,14 @@ A solution will be given in next week's coding activities.
 
 ## 7. Start the coursework
 
-1. Read the specification.
+1. Read the coursework specification.
 2. Sign in to GitHub.
 3. Use the correct link (individual/group) to create the coursework repository from the GitHub classroom:
 
-    - [COMP0034 Coursework 2 (Individual)](https://classroom.github.com/a/H-Z2Ab1c)
+    - Hyperlink: [COMP0034 Coursework 2 (Individual)](https://classroom.github.com/a/H-Z2Ab1c)
         - Accept the assignment.
         - Accept to join the ucl-comp0035 organisation if prompted
-    - [COMP0034 Coursework 1 (Group)](https://classroom.github.com/a/z2jRn9PD)
+    - Hyperlink: [COMP0034 Coursework 1 (Group)](https://classroom.github.com/a/z2jRn9PD)
         - **One person only (first person from the group)**
         - Accept the assignment.
         - If prompted, accept to join the comp0035-ucl organisation.
