@@ -14,12 +14,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
-minversion = "2.7"
-addopts = "-rfEX -p pytester --strict-markers"
-python_files = ["test_*.py", "*_test.py", "test/*.py"]
-python_classes = ["Test"]
-python_functions = ["test"]
-testpaths = ["test"]
+testpaths = ["tests"]
 xfail_strict = true
 filterwarnings = [
     "error",
