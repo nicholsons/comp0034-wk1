@@ -8,16 +8,12 @@ dependencies = [
 
 [build-system]
 requires = [
-    "setuptools>=65.0",
-    "setuptools-scm[toml]>=6.2.3",
+    "setuptools",
+    "setuptools-scm",
 ]
 build-backend = "setuptools.build_meta"
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-xfail_strict = true
-filterwarnings = [
-    "error",
-    # pytest's own futurewarnings
-    "ignore::pytest.PytestExperimentalApiWarning",
-]
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+# include = ["flask_app1", "flask_app2", "paralympics"]
+namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
