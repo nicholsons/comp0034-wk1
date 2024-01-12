@@ -87,7 +87,7 @@ Stop the running app using `CTRL+C`.
 Now go back to Terminal and start the app from the command line using `flask --app flask_app1/app1.py run --debug` (
 add `--port 5001` to the end of the command chain if you need to change the port number).
 
-## 5. View and run a Flask app that uses a template and .CSS styling
+## 5. View and run a Flask app that uses a template and CSS styling
 
 You will not learn HTML and Jinja templates until after reading week. However, so you can see the difference, open the
 flask_app2 folder.
